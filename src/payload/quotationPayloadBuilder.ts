@@ -11,7 +11,7 @@ export default class QuotationPayloadBuilder {
 
     language?: string;
 
-    stops: Stop[] | undefined;
+    stops: Omit<Stop, "contact">[] | undefined;
 
     isRouteOptimized?: boolean;
 
@@ -41,7 +41,7 @@ export default class QuotationPayloadBuilder {
         return this;
     }
 
-    withStops(stops: Stop[]): QuotationPayloadBuilder {
+    withStops(stops: Omit<Stop, "contact">[]): QuotationPayloadBuilder {
         this.stops = stops;
         return this;
     }

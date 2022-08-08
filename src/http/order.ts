@@ -12,6 +12,18 @@ export default class OrderHTTPClient extends BaseHTTPClient {
                     const order = d;
                     order.id = order.orderId;
                     delete order.orderId;
+
+                    order.stops.forEach((stopData: any) => {
+                        const s = stopData;
+                        s.contact = {
+                            name: s.name,
+                            phone: s.phone,
+                        };
+
+                        delete s.name;
+                        delete s.phone;
+                    });
+
                     resolve(<IOrder>(<unknown>order));
                 })
                 .catch((e) => {
@@ -28,6 +40,18 @@ export default class OrderHTTPClient extends BaseHTTPClient {
                     const order = d;
                     order.id = order.orderId;
                     delete order.orderId;
+
+                    order.stops.forEach((stopData: any) => {
+                        const s = stopData;
+                        s.contact = {
+                            name: s.name,
+                            phone: s.phone,
+                        };
+
+                        delete s.name;
+                        delete s.phone;
+                    });
+
                     resolve(<IOrder>(<unknown>order));
                 })
                 .catch((e) => {
@@ -70,6 +94,18 @@ export default class OrderHTTPClient extends BaseHTTPClient {
                     const order = d;
                     order.id = order.orderId;
                     delete order.orderId;
+
+                    order.stops.forEach((stopData: any) => {
+                        const s = stopData;
+                        s.contact = {
+                            name: s.name,
+                            phone: s.phone,
+                        };
+
+                        delete s.name;
+                        delete s.phone;
+                    });
+
                     resolve(<IOrder>(<unknown>order));
                 })
                 .catch((e) => {

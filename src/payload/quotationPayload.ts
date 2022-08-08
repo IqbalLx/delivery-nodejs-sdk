@@ -11,7 +11,7 @@ export default class QuotationPayload {
 
     private language: string | undefined;
 
-    private stops: Stop[];
+    private stops: Omit<Stop, "contact">[];
 
     private isRouteOptimized?: boolean;
 

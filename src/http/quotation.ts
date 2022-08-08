@@ -11,6 +11,13 @@ export default class QuotationHTTPClient extends BaseHTTPClient {
                     const q = d;
                     q.id = q.quotationId;
                     delete q.quotationId;
+
+                    q.stops.forEach((stopData: any) => {
+                        const s = stopData;
+                        s.id = s.stopId;
+                        delete s.stopId;
+                    });
+
                     resolve(<IQuotation>(<unknown>q));
                 })
                 .catch((e) => {
@@ -27,6 +34,13 @@ export default class QuotationHTTPClient extends BaseHTTPClient {
                     const q = d;
                     q.id = q.quotationId;
                     delete q.quotationId;
+
+                    q.stops.forEach((stopData: any) => {
+                        const s = stopData;
+                        s.id = s.stopId;
+                        delete s.stopId;
+                    });
+
                     resolve(<IQuotation>(<unknown>q));
                 })
                 .catch((e) => {
