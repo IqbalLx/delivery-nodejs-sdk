@@ -1,5 +1,5 @@
 {
-    "name": "@iqballx/lalamove-js",
+    "name": "@lalamove/lalamove-js",
     "version": "1.0.11",
     "description": ".",
     "main": "dist/index.js",
